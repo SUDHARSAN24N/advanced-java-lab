@@ -82,16 +82,17 @@ public class calc extends Applet implements ActionListener{
         add(b0);
         add(equ);
         add(c);
+        
     }
     public void actionPerformed(ActionEvent ae){
         String s=ae.getActionCommand();
-        if(s.equals("+")||s.equals("-")||s.equals("*")||s.equals("/")){
+        if(s.equals("+")||s.equals("-")||s.equals("*")||s.equals("/"))
+        {
         String s1=t1.getText();
         tmp=s;
         a=Integer.parseInt(s1);
         msg="";
-        
-    }
+        }
         else if(s.equals("="))
         {
             String s2=t1.getText();
@@ -107,7 +108,9 @@ public class calc extends Applet implements ActionListener{
                 sum=a/b;
         }
         else(s.equals("c"))
+        {
             t1.setText("");
+        }
         
 }
 }
