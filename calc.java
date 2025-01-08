@@ -57,7 +57,7 @@ public class calc extends Applet implements ActionListener{
         b0=new Button("0");
         b0.setBounds(53,152,32,32);
         b0.addActionListener(this);
-        equ=new Button();
+        equ=new Button("=");
         equ.setBounds(128,152,32,32);
         equ.addActionListener(this);
         c=new Button("c");
@@ -79,10 +79,10 @@ public class calc extends Applet implements ActionListener{
         add(mul);
         add(div);
         add(dot);
-        add(b0);
         add(equ);
         add(c);
-        
+        g.setColor(Color.brown);
+        g.drawRect(10,10,185,185);    
     }
     public void actionPerformed(ActionEvent ae){
         String s=ae.getActionCommand();
