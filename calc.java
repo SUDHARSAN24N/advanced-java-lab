@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class calc extends Applet implements ActionListener{
         TextField t1;
         Button b0,b1,b2,b3,b4,b5,b6,b7,b8,b9;
-        Button add,sub,mul,div,dot,ac,equ;
+        Button add,sub,mul,div,dot,c,equ;
         String msg="",tmp;
         int a,b;
     public void paint(Graphics g){
@@ -60,6 +60,9 @@ public class calc extends Applet implements ActionListener{
         equ=new Button();
         equ.setBounds(128,152,32,32);
         equ.addActionListener(this);
+        c=new Button("c");
+        c.setBounds(180,180,32,32);
+        c.addActionListener(this);
         add(t1);
         add(b9);
         add(b8);
@@ -78,6 +81,7 @@ public class calc extends Applet implements ActionListener{
         add(dot);
         add(b0);
         add(equ);
+        add(c);
     }
     public void actionPerformed(ActionEvent ae){
         String s=ae.getActionCommand();
@@ -88,7 +92,8 @@ public class calc extends Applet implements ActionListener{
         msg="";
         
     }
-        else if(s.equals("=")){
+        else if(s.equals("="))
+        {
             String s2=t1.getText();
             b=Integer.parseInt(s2);
             int sum=0;
@@ -100,8 +105,9 @@ public class calc extends Applet implements ActionListener{
                 sum=a*b;
             else if(tmp=="/")
                 sum=a/b;
-                  
-            
         }
+        else(s.equals("c"))
+            t1.setText("");
+        
 }
 }
