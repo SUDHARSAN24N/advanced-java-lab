@@ -6,10 +6,10 @@ public class calc extends Applet implements ActionListener{
         Button b0,b1,b2,b3,b4,b5,b6,b7,b8,b9;
         Button add,sub,mul,div,dot,c,equ;
         String msg="",tmp;
-        Double a,b;
+        double a,b;
     public void init(){ 
         setLayout(null);
-        t1=new TextField();
+        t1=new TextField(20);
         t1.setBounds(15,15,135,30);
         t1.addActionListener(this);
         b9=new Button("9");
@@ -88,13 +88,13 @@ public class calc extends Applet implements ActionListener{
         {
         String s1=t1.getText();
         tmp=s;
-        a=Double.parseInt(s1);
+        a=Double.parseDouble(s1);
         msg="";
         }
         else if(s.equals("="))
         {
             String s2=t1.getText();
-            b=Integer.parseInt(s2);
+            b=Double.parseDouble(s2);
             int sum=0;
             if(tmp=="+")
                 sum=a+b;
@@ -107,13 +107,14 @@ public class calc extends Applet implements ActionListener{
             String s1=String.valueOf(sum);
             t1.setText(""+s1);
         }
-        else if(s.equals("c")){
-            t1.setText("");
-        }
+        
 else{
 msg+=s;
 t1.setText(msg);
-}        
+} 
+       if(s.equals("Clear")){
+         t1.setText("");
+    } 
 }
    public void paint(Graphics g)
 {
