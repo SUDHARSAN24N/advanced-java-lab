@@ -5,8 +5,8 @@ public class calc extends Applet implements ActionListener{
         TextField t1;
         Button b0,b1,b2,b3,b4,b5,b6,b7,b8,b9;
         Button add,sub,mul,div,dot,c,equ;
-        String msg="",tmp;
-        double a,b;
+        String msg="",tmp,s,s1,s2;
+        double a,b,sum;
     public void init(){ 
         setLayout(null);
         t1=new TextField(20);
@@ -60,7 +60,7 @@ public class calc extends Applet implements ActionListener{
         equ=new Button("=");
         equ.setBounds(108,182,42,42);
         equ.addActionListener(this);
-        c=new Button("c");
+        c=new Button("AC");
         c.setBounds(160,15,32,32);
         c.addActionListener(this);
         add(t1);
@@ -83,36 +83,44 @@ public class calc extends Applet implements ActionListener{
         add(c);      
     }
     public void actionPerformed(ActionEvent ae){
-        String s=ae.getActionCommand();
+        s=ae.getActionCommand();
         if(s.equals("+")||s.equals("-")||s.equals("*")||s.equals("/"))
         {
-        String s1=t1.getText();
+        s1=t1.getText();
         tmp=s;
         a=Double.parseDouble(s1);
         msg="";
         }
         else if(s.equals("="))
         {
-            String s2=t1.getText();
+            s2=t1.getText();
             b=Double.parseDouble(s2);
-            int sum=0;
+            sum=0;
             if(tmp=="+")
                 sum=a+b;
+            
             else if(tmp=="-")
                 sum=a-b;
             else if(tmp=="*")
                 sum=a*b;
             else if(tmp=="/")
                 sum=a/b;
-            String s1=String.valueOf(sum);
+         s1=String.valueOf(sum);
             t1.setText(""+s1);
+            msg="";
+        }else{
+            msg += s;
+            t1.setText(""+msg);
+
         }
+        if(s.equals("."))
+    {
+        if(!t1.getText().contains(".")){
+            t1.setText(t1.getText()+".");
+        }
+    }
         
-else{
-msg+=s;
-t1.setText(msg);
-} 
-       if(s.equals("Clear")){
+       if(s.equals("AC")){
          t1.setText("");
     } 
 }
