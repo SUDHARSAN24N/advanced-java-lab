@@ -32,19 +32,60 @@ public class server2 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String  itemsname,itemstype,quanity,price,total,name,address,city,phone,order,delivery="";
+        String  itemsname,itemstype,quanity,price,total,name,address,city,email,phone,order,delivery="";
         try {
             /* TODO output your page here. You may use following sample code. */
             itemsname=request.getParameter("itemsname");
-            itemsname=request.getParameter("itemsname");
+            itemstype=request.getParameter("itemstype");
+             quanity=request.getParameter("quanity");
+              price=request.getParameter("price");
+               total=request.getParameter("total");
+                name=request.getParameter("name");
+                 address=request.getParameter("address");
+                  city=request.getParameter("city");
+                  email=request.getParameter("email");
+                   phone=request.getParameter("phone");
+                   order=request.getParameter("order");
+                   delivery=request.getParameter("delivery");
+                   
+                    
+                   
+               
             quanity=request.getParameter("quanity");
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet server2</title>");            
             out.println("</head>");
+            out.println("<style>body{"
+            +"background-image: url('image.jpg');"
+            +"background-attachment:fixed;"
+            +"background-repeat: no-repeat;"
+            +"background-size: cover;}"
+            + "</style>");
             out.println("<body>");
-            //out.println("<h1>Servlet server2 at " + request.getContextPath() + "</h1>");
+                        //out.println("<h1>Servlet server2 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Product Details</h1>");
+            out.println("<ol>"
+                    + "<li>Item name:"+itemsname+"</li>"
+                    + "<li>Item type:"+itemstype+"</li>"
+                    + "<li>Quanity:"+quanity+"</li>"
+                    + "<li>Price:"+price+"</li>"
+                    + "<li>Total:"+total+"</li>"
+                    +"</ol>");
+             out.println("<h1>Customer Details</h1>");
+            out.println("<ol>"
+                    +"<li>Name:"+name+"</li>"
+                    +"<li>Address:"+address+"</li>"
+                    +"<li>City:"+city+"</li>"
+                    +"<li>Email Id:"+email+"</li>"
+                    +"<li>Phone NO:"+phone+"</li>"
+                    + "</ol>");
+            out.println("<h1>Customer Details</h1>");
+            out.println("<ol>"
+                    +"<li>Order Date:"+order+"</li>"
+                    +"<li>Delivery Date:"+delivery+"</li>"
+                    + "</ol>");        
             out.println("</body>");
             out.println("</html>");
         } finally {            
