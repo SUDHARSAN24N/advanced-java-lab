@@ -8,17 +8,38 @@ and open the template in the editor.
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
+    <style>
+        body{
+            background-image: url('image.jpg');
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }    
+        div{
+width:400px;
+height:610px;
+margin:35px auto;
+font-family:sans-serif;
+float:center;
+}
+input{
+width:100%;
+height:40px;
+color:#4f4f4f;
+}
+
+    </style>
     <body>
        
             <center> 
+                <div>
                 <form action="server2" method="post">
         <h1>Production Details</h1>
         <label name="itemsname">Items Name</label>
         <input type="text" placeholder="Enter the item name" name="itemsname" id="itemsname" required><br><br>
         <label name="itemstype">Items Types</label>
         <input type="text" placeholder="Enter the item type" name="itemstype" id="itemstype" required><br><br> 
-         <label name="itemsname">Items Name</label>
-        <input type="text" placeholder="Enter the item name" name="itemsname" id="itemsname" required><br><br>
+      
          <label name="quanity">Quanity</label>
         <input type="text" placeholder="Enter the Quanity" name="quanity" id="quanity" required><br><br>
          <label name="price">price</label>
@@ -33,11 +54,13 @@ and open the template in the editor.
         <input type="text" placeholder="Enter the adddress" name="address" id="address" required><br><br>
          <label name="city">city</label>
         <input type="text" placeholder="Enter the location" name="city" id="city" required><br><br>
+         <label name="email">Email id</label>
+         <input type="email" placeholder="Enter the email id" name="email" id="eamil" required><br><br>
          <label name="phone">Phone no</label>
          <input type="text" placeholder="Enter the phone number" name="phone" id="phone" required><br><br>
        
             <h1>Delivery Details</h1>
-             <label name="oreder">ordered date</label>
+             <label name="order">ordered date</label>
         <input type="date" placeholder="Enter the ordered date" name="order" id="order" required><br><br>
          <label name="delivery">delivery date</label>
          <input type="date" placeholder="Enter the delivery date" name="delivery" id="delivery" required><br><br>
@@ -46,6 +69,6 @@ and open the template in the editor.
             <button type="submit">Submit</button>
                 </form>
         </center>
-        
+</div>
     </body>
 </html>
