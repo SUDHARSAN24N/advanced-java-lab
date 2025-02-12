@@ -1,0 +1,39 @@
+<html>
+      <head>
+        <title>student mark details page</title>
+      </head>
+      <style>
+          label{
+              width: 300px;
+              display: inline-block;
+              text-align: left;
+              color:white;
+              font-size:20px;
+               }
+      </style>
+    <body bgcolor='red'>
+    <center>
+        <form action="details.jsp" method="post">
+        <h1><u>STUDENTS MARKS LIST:</u></h1>
+        <label for="name">Enter the Name:</label>
+        <input type="text" placeholder="Enter the students name" id="name" name="name" required>
+        <br><br>
+        <label for="regi">Enter the register number:</label>
+        <input type="number" placeholder="Register number" name="regi" id="regi" required><br><br>
+        <label for="mining">Enter the Data mining & warehouse mark:</label>
+        <input type="number" placeholder="Enter the mark" name="mining" id="mining" required><br><br>
+        <label for="pcd">Enter the principles of compiler design mark:</label>
+        <input type="number" placeholder="Enter the mark" name="pcd" id="pcd" required><br><br>
+        <label for="aj">Enter the Advanced java mark:</label>
+        <input type="number" placeholder="Enter the mark" name="aj" id="aj" required><br><br>
+        <label for="ai">Enter the AI & ML MARK:</label>
+        <input type="number" placeholder="Enter the mark" name="ai" id="ai" required><br><br>
+        <label for="web">Enter the web technology lab mark:</label>
+        <input type="number" placeholder="Enter the mark" name="web" id="web" required><br><br>
+        <label for="ajl">Enter the Advanced java lab mark:</label>
+        <input type="number" placeholder="Enter the mark" name="ajl" id="ajl" required><br><br>
+        <button type="submit"style="width:60px;height: 30px;margin-top: 20px" >submit</button>
+    </form>
+    </center>
+    </body>
+</html>
