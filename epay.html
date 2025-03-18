@@ -4,24 +4,25 @@
         <style>
         </style>
     </head>
-    <body>
+    <body bgcolor="beige">
         <center>
             <h1>Analysis the employee & salary saving amount</h1>
-            <form>
+            <form action="edatas.jsp" method="post">
                 <label>Your Name:</label>
-                <input type="text" placeholder="Enter your name" name="user" required>
+                <input type="text" placeholder="Enter your name" name="user" required><br><br>
                 <label>Employee id:</label>
-                <input text="number" placeholder="Enter your id" name="id" required>
+                <input text="number" placeholder="Enter your id" name="id" required><br><br>
                 <label>Salary:</label>
-                <input type="text" placeholder="Enter your salary value" name="sal" required>
+                <input type="text" placeholder="Enter your salary value" name="sal" required><br><br>
                 <label>Working role:</label>
-                <select>
+                <select name="job">
                     <option value="">--select your role--</option>
-                    <option value="1">DESIGNER</option>
-                    <option value="2">DEVELOPER</option>
-                    <option value="3"> DIGITAL MARKETING</option>
-                    <option value="4">TRADING/STOCK MARKET</option>
-                </select>                   
+                    <option value="DESIGNER">DESIGNER</option>
+                    <option value="DEVELOPER">DEVELOPER</option>
+                    <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+                    <option value="TRADING/STOCK MARKET">TRADING/STOCK MARKET</option>
+                </select><br><br>                   
+                <button type="submit">submit</button>
             </form>
         </center>
     </body>
