@@ -1,16 +1,21 @@
+
 import java.rmi.*;
 import java.io.*;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.*;
 public class cclient{
     public static void main(String arg[])throws IOException
     {
+        BufferedReader x =new BufferedReader(new InputStreamReader(System.in));
+          Registry registry=LocateRegistry.getRegistry("localhost",1099);
         int a,b;
-        DataInputStream x=new DataInputStream(System.in);
+        //DataInputStream x=new DataInputStream(System.in);
         System.out.println("Enter two value");
         a=Integer.parseInt(x.readLine());
         b=Integer.parseInt(x.readLine());
         try{
             String o="ci";
-            inter c=(inter)Naming.lookup(o);
+            inter c=(inter)registry.lookup(o);
             int i,j,k,l;
             i=c.add(a,b);
             j=c.sub(a,b);
