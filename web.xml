@@ -1,0 +1,13 @@
+<web-app>
+
+<servlet>
+<servlet-name>sonoojaiswal</servlet-name>
+<servlet-class>showHeaders</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>sonoojaiswal</servlet-name>
+<url-pattern>/run</url-pattern>
+</servlet-mapping>
+
+</web-app>
